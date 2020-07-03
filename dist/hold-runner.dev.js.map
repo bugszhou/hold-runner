@@ -1,0 +1,1 @@
+{"version":3,"file":"hold-runner.dev.js","sources":["../src/lib/index.js"],"sourcesContent":["export const MODULE_NAME = \"hold-runner\";\n\nexport function holdRunner() {}\n"],"names":["holdRunner"],"mappings":";;;;;;;;;;UAEgBA,UAAT,EAAsB;;;;;;;;"}
