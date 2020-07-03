@@ -7,9 +7,10 @@ import builtins from '@joseph184/rollup-plugin-node-builtins';
 import globals from 'rollup-plugin-node-globals';
 import { terser } from "rollup-plugin-terser";
 import miniprogram from 'rollup-plugin-miniprogram';
+import rollupTypescript from "rollup-plugin-typescript2";
 
 export default {
-  input: 'src/entry/index.js',
+  input: 'src/entry/index.ts',
   output: [
     // umd模式，打包所有的依赖，可供浏览器直接使用
     {
@@ -54,10 +55,12 @@ export default {
     resolve(),
     builtins(),
     globals(),
+    rollupTypescript(),
     babel({
       configFile: path.resolve(__dirname, './.babelrc'),
       runtimeHelpers: true,
       exclude: 'node_modules/**',
+      extensions: [".ts"],
     }),
     terser({
       include: [/^.+\.min\.js$/],
