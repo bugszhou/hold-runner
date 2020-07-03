@@ -1,7 +1,3 @@
-import {
-hold-runner
-} from '../lib/index';
+import { holdRunner } from "../lib/index";
 
-export {
-hold-runner
-};
+export default holdRunner;
